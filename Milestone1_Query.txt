@@ -1,0 +1,8 @@
+SELECT r.region_id, 
+	c.name AS nome_nazione,
+	r.name AS nome_regione,
+	c2.name AS nome_continente
+FROM regions r 
+JOIN countries c ON r.region_id = c.region_id 
+JOIN continents c2 ON r.continent_id = c2.continent_id 
+ORDER BY c.name ASC
